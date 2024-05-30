@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: rgb(221, 186, 213);
+            margin: 0;
+            padding: 0;
+            display: flex; /* Use flexbox to center content */
+            flex-direction: column; /* Align items in a column */
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+            text-align: center; /* Center text inside the container */
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .navbar li {
+            display: inline-block;
+            font-size: 20px;
+        }
+        .navbar li a {
+            color: rgb(197, 40, 197);
+            padding: 12px;
+            text-decoration: none;
+        }
+        .navbar li a:hover, .navbar li a:active {
+            text-decoration: underline;
+            color: black;
+        }
+        .navbar li ul {
+            display: none;
+            position: absolute;
+            background-color: rgb(179, 150, 179);
+            padding: 10px;
+            border-radius: 0px 0px 4px 4px;
+        }
+        .navbar li ul li {
+            width: 90px;
+            border-radius: 4px;
+        }
+        .navbar li:hover ul {
+            display: block;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="color:purple; font-style: italic; font-size: 40px;">FITFLEX GYM</h1>
+    </header>
+    <ul class="navbar">
+        <li><a href="gymproject.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="galleryproject.html">Gallery</a></li>
+        <li><a href="slotsproject.html">Slots</a></li>
+        <li><a href="#" class="active">Contact Us</a>
+            <ul>
+                <li><a href="#">Trainers</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="content">
+        <h1 style="color:rgb(180, 64, 180); font-style: italic; font-size:30px;">CONTACT US</h1>
+        <h3>Website</h3>
+        <p><a href="https://mohitroy2004.com">https://mohitroy2004.comye</a></p>
+        <h3>Address</h3>
+        <p>263153<br>Rudrapur udham singh nager<br>Rudrapur<br>Uttrakhand</p>
+        <h3>Contact Number</h3>
+        <p>For any inquiries or information, you can reach us at the following numbers:<br>8006696819<br>8006696929</p>
+        <h3>Email</h3>
+        <p><a href="mailto:mrsport2004@gmail.com">mrsport2004@gmail.com</a></p>
+        <h3>Social Media</h3>
+        <p class="social-icons">
+            <a href="https://www.instagram.com/mohitroy2004?igsh=bmw0MTlkOW16Y254" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100037132896335&mibextid=ZbWKwL" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </p>
+
+        <form id="feedbackForm">
+            <label for="feedback">Feedback</label>
+            <textarea id="feedback" rows="5" cols="40"></textarea>
+            <br>
+            <button type="button" onclick="sendFeedback()">Submit via WhatsApp</button>
+        </form>
+    </div>
+    <footer>
+        <p>Copyright © 2021, FitFlex. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function sendFeedback() {
+            var feedback = document.getElementById('feedback').value;
+            var phoneNumber = '8006696819';
+            var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(feedback);
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
